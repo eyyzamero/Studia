@@ -1,49 +1,49 @@
-# Podstawy Programowania - zadanie z pêtlami
+# Podstawy Programowania - zadanie z pÄ™tlami
 
-Zadanie polega na wypisaniu w konsoli (w jêzyku C++) poni¿szych figur
+Zadanie polega na wypisaniu w konsoli (w jÄ™zyku C++) poniÅ¼szych figur
 
 Zadanie 1
 
-XXXXXXXX
-........
-XXXXXXXX
-........
-XXXXXXXX
+XXXXXXXX<br>
+........<br>
+XXXXXXXX<br>
+........<br>
+XXXXXXXX<br>
 
 Zadanie 2
 
-X.X.X.X.
-X.X.X.X.
-X.X.X.X.
-X.X.X.X.
-X.X.X.X.
+X.X.X.X.<br>
+X.X.X.X.<br>
+X.X.X.X.<br>
+X.X.X.X.<br>
+X.X.X.X.<br>
 
 Zadanie 3
 
-XXXXXX
-.XXXXX
-..XXXX
-...XXX
-....XX
-.....X
+XXXXXX<br>
+.XXXXX<br>
+..XXXX<br>
+...XXX<br>
+....XX<br>
+.....X<br>
 
 Zadanie 4
 
-XXXXXXX
-.XXXXX.
-..XXX..
-...X...
-..XXX..
-.XXXXX.
-XXXXXXX
+XXXXXXX<br>
+.XXXXX.<br>
+..XXX..<br>
+...X...<br>
+..XXX..<br>
+.XXXXX.<br>
+XXXXXXX<br>
 
 Zadanie 5
 
-X.X.X.X.
-.X.X.X.X
-X.X.X.X.
-.X.X.X.X
-X.X.X.X.
-.X.X.X.X
-X.X.X.X.
+X.X.X.X.<br>
+.X.X.X.X<br>
+X.X.X.X.<br>
+.X.X.X.X<br>
+X.X.X.X.<br>
+.X.X.X.X<br>
+X.X.X.X.<br>
 .X.X.X.X
