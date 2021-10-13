@@ -3,6 +3,7 @@
 #include "Exercise_2.h"
 #include "Exercise_3.h"
 #include "Exercise_4.h"
+#include "Exercise_5.h"
 
 auto main() -> int
 {
@@ -12,6 +13,7 @@ auto main() -> int
 		draw_second_shape();
 		draw_third_shape();
 		draw_fourth_shape();
+		draw_fifth_shape();
 	}
 	catch (...)
 	{
