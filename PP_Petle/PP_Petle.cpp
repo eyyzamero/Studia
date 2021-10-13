@@ -1,15 +1,13 @@
-#include <iostream>
-
 // Import exercise headers
 #include "Exercise_1.h"
-
-using namespace std;
+#include "Exercise_2.h"
 
 auto main() -> int
 {
 	try
 	{
 		draw_first_shape();
+		draw_second_shape();
 	}
 	catch (...)
 	{
