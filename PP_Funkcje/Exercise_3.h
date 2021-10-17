@@ -20,7 +20,7 @@ class Exercise3 final : ExerciseBase
 			std::cout << std::endl;
 			std::cout << "[7.70, 13.75, -11.11, 999.37, 1337.34] Ilosc elementow: 5" << std::endl;
 			print_array(reverse_array(new float[] { 7.70f, 13.75f, -11.11f, 999.37f, 1337.34f }, 5), 5);
-			std::cout << std::endl << std::endl;
+			std::cout << std::endl;
 		}
 
 		static float* reverse_array(const float number[], const int sizeOfArray)

@@ -2,6 +2,7 @@
 #include "Exercise_2.h"
 #include "Exercise_3.h"
 #include "Exercise_4.h"
+#include "Exercise_5.h"
 
 int main()
 {
@@ -19,8 +20,13 @@ int main()
 		auto* ex3 = new Exercise3();
 		ex3 -> run();
 
+		// Zadanie 4
 		auto* ex4 = new Exercise4();
 		ex4 -> run();
+
+		// Zadanie 5
+		auto* ex5 = new Exercise5();
+		ex5 -> run();
 	}
 	catch (...)
 	{
