@@ -148,6 +148,7 @@
     <ClInclude Include="Exercise_3.h" />
     <ClInclude Include="Exercise_4.h" />
     <ClInclude Include="Exercise_5.h" />
+    <ClInclude Include="Exercise_6.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
