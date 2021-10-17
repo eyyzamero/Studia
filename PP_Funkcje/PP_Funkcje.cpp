@@ -4,6 +4,7 @@
 #include "Exercise_4.h"
 #include "Exercise_5.h"
 #include "Exercise_6.h"
+#include "Exercise_7.h"
 
 int main()
 {
@@ -32,6 +33,10 @@ int main()
 		// Zadanie 6
 		auto* ex6 = new Exercise6();
 		ex6 -> run();
+
+		// Zadanie 7
+		auto* ex7 = new Exercise7();
+		ex7 -> run();
 	}
 	catch (...)
 	{
