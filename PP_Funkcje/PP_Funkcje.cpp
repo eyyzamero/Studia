@@ -1,42 +1,72 @@
-#include "Exercise_1.h"
-#include "Exercise_2.h"
-#include "Exercise_3.h"
-#include "Exercise_4.h"
-#include "Exercise_5.h"
-#include "Exercise_6.h"
-#include "Exercise_7.h"
+#include <iostream>
+
+#include "ExerciseBase.h"
+
+using namespace std;
+
+namespace Exercises
+{
+	class EX1 final : ExerciseBase
+	{
+		public:
+			void run() override
+			{
+				auto* ex = new EX1();
+				ex -> execute();
+				delete ex;
+			}
+
+		private:
+			void execute() override
+			{
+				cout << "Zadanie 1";
+
+				// First example
+				cout << "\n\n[1.50, 0.75, 3.11, 0.37, 11.34]\n";
+				cout << "Najmniejsza liczba: " << ReturnSmalestNumberOfFiveArguments(1.5f, 0.75f, 3.11f, 0.37f, 11.34f);
+
+				// Second example
+				cout << "\n\n[13.89, 99.4, 77.11, -14.37, 0]\n";
+				cout << "Najmniejsza liczba: " << ReturnSmalestNumberOfFiveArguments(13.89f, 99.4f, 77.11f, -14.37f, 0);
+
+				// Third example
+				cout << "\n\n[-999.99, -123.75, -7.1, 999.3, -13131.9]\n";
+				cout << "Najmniejsza liczba: " << ReturnSmalestNumberOfFiveArguments(-999.99f, -123.75f, -7.1f, 999.3f, -13131.9f);
+				
+				cout << "\n\n";
+			}
+
+			static float ReturnSmalestNumberOfFiveArguments(const float l1, const float l2, const float l3, const float l4, const float l5)
+			{
+				auto* numbers = new float[5];
+
+				numbers[0] = l1;
+				numbers[1] = l2;
+				numbers[2] = l3;
+				numbers[3] = l4;
+				numbers[4] = l5;
+
+				auto min = numbers[0];
+
+				for (auto i = 0; i < 5; i++)
+				{
+					if (min > numbers[i])
+						min = numbers[i];
+				}
+
+				delete[] numbers;
+
+				return min;
+			}
+		};
+}
 
 int main()
-{
+{	
 	try
 	{
-		// Zadanie 1
-		auto* ex1 = new Exercise1();
-		ex1 -> run();
-	
-		// Zadanie 2
-		auto* ex2 = new Exercise2();
-		ex2 -> run();
-
-		// Zadanie 3
-		auto* ex3 = new Exercise3();
-		ex3 -> run();
-
-		// Zadanie 4
-		auto* ex4 = new Exercise4();
-		ex4 -> run();
-
-		// Zadanie 5
-		auto* ex5 = new Exercise5();
-		ex5 -> run();
-
-		// Zadanie 6
-		auto* ex6 = new Exercise6();
-		ex6 -> run();
-
-		// Zadanie 7
-		auto* ex7 = new Exercise7();
-		ex7 -> run();
+		auto* ex = new Exercises::EX1();
+		ex -> run();
 	}
 	catch (...)
 	{
