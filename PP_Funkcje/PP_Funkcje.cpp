@@ -58,14 +58,60 @@ namespace Exercises
 
 				return min;
 			}
-		};
+	};
+
+	class EX2 final : ExerciseBase
+	{
+		public:
+			void run() override
+			{
+				auto* ex = new EX2();
+				ex -> execute();
+				delete ex;
+			}
+
+		private:
+			void execute() override
+			{
+				cout << "Zadanie 2";
+
+				// First example
+				cout << "\n\n[1.11, 2.22, 3.33, 4.44, 5.55] Ilosc elementow: 5";
+				cout << "\nNajmniejsza liczba: " << GetSmallestNumberFromArray(new float[] { 1.11f, 2.22f, 3.33f, 4.44f, 5.55f }, 5);
+
+				// Second example
+				cout << "\n\n[-10.07, 0.11, -611.66] Ilosc elementow: 3";
+				cout << "\nNajmniejsza liczba: " << GetSmallestNumberFromArray(new float[] { -10.07f, 0.11f, -611.66f }, 3);
+
+				// Third example
+				cout << "\n\n[11.44, 2222.09, -3333.34, 7501.99] Ilosc elementow: 4";
+				cout << "\nNajmniejsza liczba: " << GetSmallestNumberFromArray(new float[] { 11.44f, 2222.09f, -3333.34f, 7501.99f }, 4);
+
+				cout << "\n\n";
+			}
+
+			static float GetSmallestNumberFromArray(const float numbers[], const int sizeOfArray)
+			{
+				auto min = numbers[0];
+
+				for (auto i = 0; i < sizeOfArray; i++)
+				{
+					if (min > numbers[i])
+						min = numbers[i];
+				}
+
+				delete[] numbers;
+
+				return min;
+			}
+	};
 }
 
 int main()
 {	
 	try
 	{
-		auto* ex = new Exercises::EX1();
+		auto* ex = new Exercises::EX2();
 		ex -> run();
 	}
 	catch (...)
