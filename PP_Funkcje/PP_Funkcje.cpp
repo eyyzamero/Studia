@@ -105,13 +105,69 @@ namespace Exercises
 				return min;
 			}
 	};
+
+	class EX3 final : ExerciseBase
+	{
+		public:
+			void run() override
+			{
+				auto* ex = new EX3();
+				ex -> execute();
+				delete ex;
+			}
+		
+		private:
+			void execute() override
+			{
+				cout << "Zadanie 3";
+
+				// First example
+				cout << "\n\n[1.50, 0.75, 3.11, 0.37, 11.34] Ilosc elementow: 5";
+				auto* firstExampleArray = new float[] { 1.50f, 0.75f, 3.11f, 0.37f, 11.34f };
+				cout << "\nOdwrocona tablica: [";
+				PrintAnArray(ReverseAnArray(firstExampleArray, 5), 5);
+				cout << "]";
+
+				// Second example
+				cout << "\n\n[7.70, 13.75, -11.11, 999.37, 1337.34] Ilosc elementow: 5";
+				auto* secondExampleArray = new float[] { 7.70f, 13.75f, -11.11f, 999.37f, 1337.34f };
+				cout << "\nOdwrocona tablica: [";
+				PrintAnArray(ReverseAnArray(secondExampleArray, 5), 5);
+				cout << "]";
+
+				cout << "\n\n";
+
+				delete[] firstExampleArray;
+				delete[] secondExampleArray;
+			}
+
+			static float* ReverseAnArray(const float* numbers, const int sizeOfArray)
+			{
+				auto counter = 0;
+				auto* newArray = new float[sizeOfArray - 1];
+
+				for (auto i = sizeOfArray - 1; i >= 0; i--)
+				{
+					newArray[counter] = numbers[i];
+					counter++;
+				}
+				
+				return newArray;
+			}
+
+			static void PrintAnArray(const float* arr, const int sizeOfArray)
+			{
+				for (auto i = 0; i <= sizeOfArray - 1; i++)
+					cout << arr[i] << (i == sizeOfArray - 1 ? "" : ", ");
+			}
+	};
 }
 
 int main()
 {	
 	try
 	{
-		auto* ex = new Exercises::EX2();
+		auto* ex = new Exercises::EX3();
 		ex -> run();
 	}
 	catch (...)
