@@ -213,9 +213,52 @@ namespace Exercises
 			static void PrintResults(vector<int>* results)
 			{
 				for (auto i = 0; i <= static_cast<int>(results -> size()) - 1; i++)
-					cout << results -> at(i) << (i == static_cast<int>(results->size()) - 1 ? "" : ", ");
+					cout << results -> at(i) << (i == static_cast<int>(results -> size()) - 1 ? "" : ", ");
 				
 				delete results;
+			}
+	};
+
+	class EX5 final : ExerciseBase
+	{
+		public:
+			void run() override
+			{
+				auto* ex = new EX5();
+				ex -> execute();
+				delete ex;
+			}
+
+		private:
+			void execute() override
+			{
+				cout << "Zadanie 5";
+
+				// First example
+				cout << "\n\n[4, 9, 12, 567, 15, 24, 65] \nIlosc elementow: 7 \nModulo: 7 \n[";
+				auto* firstExampleArray = new int[] { 4, 9, 12, 567, 15, 24, 65 };
+				ModuloEachItemInArray(firstExampleArray, 7, 7);
+
+				// Second example
+				std::cout << "]\n\n[33, 34, 778, 3504, 11111] \nIlosc elementow: 5 \nModulo: 7\n[";
+				auto* secondExampleArray = new int[] { 33, 34, 778, 3504, 11111 };
+				ModuloEachItemInArray(secondExampleArray, 5, 7);
+
+				// Third exmple
+				std::cout << "]\n\n[1111, 1234, 1200, 0, 17171, 98712, 1337, 2] \nIlosc elementow: 8 \nModulo: 11";
+				auto* thirdExampleArray = new int[] { 33, 34, 778, 3504, 11111 };
+				ModuloEachItemInArray(thirdExampleArray, 8, 11);
+
+				cout << "]\n\n";
+			}
+
+			static void ModuloEachItemInArray(int* numbers, const int sizeOfArray, const int modulo)
+			{
+				for (auto i = 0; i < sizeOfArray; i++)
+				{
+					numbers[i] = numbers[i] % modulo;
+					cout << numbers[i] << (i == sizeOfArray - 1 ? "" : ", ");
+				}
 			}
 	};
 }
@@ -224,7 +267,7 @@ int main()
 {	
 	try
 	{
-		auto* ex = new Exercises::EX4();
+		auto* ex = new Exercises::EX5();
 		ex -> run();
 		delete ex;
 	}
