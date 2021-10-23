@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <string>
 
 #include "ExerciseBase.h"
 
@@ -161,14 +163,70 @@ namespace Exercises
 					cout << arr[i] << (i == sizeOfArray - 1 ? "" : ", ");
 			}
 	};
+
+	class EX4 final : ExerciseBase
+	{
+		public:
+			void run() override
+			{
+				auto* ex = new EX4();
+				ex -> execute();
+				delete ex;
+			}
+		
+		private:
+			void execute() override
+			{
+				cout << "Zadanie 4";
+
+				// First example
+				cout << "\n\n[1, 2, 3, 4, 5] Ilosc elementow: 5";
+				auto* firstExampleArray = new int[] { 1, 2, 3, 4, 5 };
+				cout << "\nParzyste liczby: [";
+				PrintResults(GetEvenNumbersFromArray(firstExampleArray, 5));
+				cout << "]";
+
+				// Second example
+				cout << "\n\n[1111, 1234, -1200, 0, 17171, 98712, -1337, -2] Ilosc elementow: 8";
+				auto* secondExampleArray = new int[] { 1111, 1234, -1200, 0, 17171, 98712, -1337, -2 };
+				cout << "\nParzyste liczby: [";
+				PrintResults(GetEvenNumbersFromArray(secondExampleArray, 8));
+				cout << "]";
+
+				cout << "\n\n";
+
+				delete[] firstExampleArray;
+				delete[] secondExampleArray;
+			}
+
+			static vector<int>* GetEvenNumbersFromArray(const int* numbers, const int sizeOfArray)
+			{
+				auto* results = new vector<int>;
+
+				for (auto i = 0; i <= sizeOfArray - 1; i++)
+					if (numbers[i] % 2 == 0)
+						results -> insert(results -> end(), numbers[i]);
+					
+				return results;
+			}
+
+			static void PrintResults(vector<int>* results)
+			{
+				for (auto i = 0; i <= static_cast<int>(results -> size()) - 1; i++)
+					cout << results -> at(i) << (i == static_cast<int>(results->size()) - 1 ? "" : ", ");
+				
+				delete results;
+			}
+	};
 }
 
 int main()
 {	
 	try
 	{
-		auto* ex = new Exercises::EX3();
+		auto* ex = new Exercises::EX4();
 		ex -> run();
+		delete ex;
 	}
 	catch (...)
 	{
