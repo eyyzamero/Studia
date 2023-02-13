@@ -6,4 +6,4 @@
 
 ## Zamysł repozytorium
 
-W repozytorium znajdują się proste zadania ze podstaw programowania w języku C++ z rozwiązaniami.
+W repozytorium znajdują się proste zadania z podstaw programowania w języku C++ z rozwiązaniami.
